@@ -80,11 +80,11 @@ func (e *TableMapEvent) Decode(data []byte) error {
 	}
 
 	pos += n
-
+/*
 	if len(data[pos:]) != bitmapByteSize(int(e.ColumnCount)) {
 		return io.EOF
 	}
-
+*/
 	e.NullBitmap = data[pos:]
 
 	return nil
